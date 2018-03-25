@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content_Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="data/cfslogo.png" type="image/x-icon"/>
+  <!-- ManyChat -->
+	<script src="//widget.manychat.com/279124742618899.js" async="async">
+	</script>
+  <script language="javascript" type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+  <script language="javascript" type="text/javascript" src="script/preview.js"></script>
+  <link href="css/menu.css" rel="stylesheet">
+</head>
+
+<body>
+<?php
+  include("lanphp.inc");
+  include('admincheck.php');
+  $user = $_SESSION['user'];
+  $user = ucfirst($user);
+?>
+
+<div id="menu_bg">
+
+<nav id="my_menu_items">
+<ul>
+  <li><a href="index.php"><?php echo $lang['home'] ?></a></li>
+  <li>
+    <a href=""><?php echo $lang['members'] ?></a>
+    <ul>
+      <?php
+        if($logged){
+          echo '<li>'.'<a href="addmember.php">'.$lang["add_member"].'</a>'.'</li>';
+        }
+      ?>
+      <li><a href="showmembers.php"><?php echo $lang['all_member'] ?></a></li>
+    </ul>
+  </li>
+  <li><a href="blood_bank.php"><?php echo $lang['ibb'] ?></a></li>
+  <li><a href="gallery.php"><?php echo $lang['gallery'] ?></a></li>
+  <li><a href="contacts.php"><?php echo $lang['contact'] ?></a>
+    <!-- <ul>
+      <li><a href="createdb.php"><?php echo $lang['db'] ?></a></li>
+      <li><a href="createtable.php"><?php echo $lang['tb'] ?></a></li>
+    </ul> -->
+  </li>
+  <?php
+    if($logged){
+      echo '<li>'.'<a href="#">'.$user.'</a>';
+      echo '<ul>';
+        echo '<li>'.'<a href="logout.php">'.$lang['logout'].'</a>'.'</li>';
+        echo '<li>'.'<a href="changepass.php">'.$lang['chgpass'].'</a>'.'</li>';
+        echo '<li>'.'<a href="addadmin.php">'.$lang['addadmin'].'</a>'.'</li>';
+      echo '</ul>';
+      echo '</li>';
+    } else {
+      echo '<li>'.'<a href="#" title="admin">'.$lang["admin"].'</a>';
+      echo '<ul>';
+        echo '<li>'.'<a href="login.php">'.$lang['login'].'</a>'.'</li>';
+      echo '</ul>';
+      echo '</li>';
+      // echo '<li>'.'<a href="#blood">'.echo $_SESSION['user'].'</a>'.'</li>';
+    }
+  ?>
+  <li><?php echo $lang['langSelect'] ?>
+  <form action="" method="post">
+  <ul>
+	<li><input type="submit" name="lanbn" value="বাংলা"/></li>
+	<li><input type="submit" name="lanen" value="English"/></li>
+  </ul>
+  </form>
+  </li>
+</ul>
+</nav>
+</div>
+</body>
+</html>
