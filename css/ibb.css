@@ -1,0 +1,75 @@
+#alldonors{
+  /*text-align: center;*/
+}
+
+#alldonors tr th{
+	background-color: #aaa;
+  color: #000;
+}
+
+#alldonors tr td{
+	background-color: #fff;
+  color: #000;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#adddonorbtn{
+  align-self: center;
+  background-color: red;
+  font-weight:bold;
+  font-style: italic;
+  font-size: 18pt;
+  color: white;
+  margin-top: 3%;
+}
+
+#total-don-ibb{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#newDonor td{
+  padding: 0 10px 2px 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#newDonor input{
+}
+
+
+#addd{
+	background: #00f;
+	color: #ff0;
+	font-size: 20px;
+	font-weight: bold;
+	/*float: left;
+	margin-left: 100px;
+	margin-bottom: 200px;*/
+}
+
+#availrow{
+  /*background-color: red;*/
+}
+
+#donationdetails{
+  padding-top: 15px;
+  text-align: center;
+}
+
+#donationdetails th{
+  background-color: yellow;
+  text-align: center;
+}
+
+#ddetails{
+}
+#ddetails table tr{
+  margin-top: 50px;
+}
+
+#ddetails table td{
+  padding:0 15px 0 15px;
+}

@@ -1,0 +1,53 @@
+body{
+  background: #eee;
+}
+
+#login{
+  border: solid grey 1px;
+  width: 20%;
+  border-radius: 8px;
+  margin: 100px auto;
+  background: white;
+  padding: 40px;
+}
+#btn{
+  color: #fff;
+  background: #337ab7;
+  padding: 5px;
+  margin-left: 60%;
+}
+
+#addbtndiv{
+  border: solid grey 1px;
+  width: 30%;
+  border-radius: 5px;
+  margin: 80px auto;
+  background: white;
+  padding: 40px;
+}
+
+#addbtndiv{
+  /* float: left; */
+}
+
+#addadmininput input{
+  border: solid grey 1px;
+  max-width: 50%;
+  /* float: left; */
+}
+
+#addadminbtn{
+  color: #fff;
+  background: #337ab7;
+  padding: 5px;
+  margin-left: 55%;
+}
+
+#changepass{
+  border: solid grey 1px;
+  width: 20%;
+  border-radius: 5px;
+  margin: 100px auto;
+  background: white;
+  padding: 50px;
+}
